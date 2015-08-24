@@ -48,7 +48,7 @@ getConfig = function (options, callback) {
     return JSON.parse(fs.readFileSync('config.json', 'utf8'));
   }
 
-  return readFile('config.json', 'utf8').then(JSON.parse).nodeify(callback);
+  return readFile(__dirname + '/config.json', 'utf8').then(JSON.parse).nodeify(callback);
 
 };
 
