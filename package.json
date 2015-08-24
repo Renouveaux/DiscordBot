@@ -1,0 +1,19 @@
+{
+  "name": "discord-bot",
+  "version": "0.1.0",
+  "description": "A bot for the skype and teamspeak alternative : Discord ( discordapp.com ).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Azastrael <beuknaheul@hotmail.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "bad-words": "^1.2.1",
+    "better-console": "^0.2.4",
+    "fs-extra": "^0.23.1",
+    "node-discord": "^0.2.0",
+    "pretty-error": "^1.2.0",
+    "promise": "^7.0.4"
+  }
+}
