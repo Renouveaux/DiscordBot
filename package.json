@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "fs-extra": "^0.23.1",
+    "multiline": "^1.0.2",
     "njstrace": "0.0.2",
     "node-discord": "^0.2.0",
     "pretty-error": "^1.2.0"
