@@ -1,19 +1,18 @@
 {
-  "name": "discord-bot",
-  "version": "0.1.0",
-  "description": "A bot for the skype and teamspeak alternative : Discord ( discordapp.com ).",
+  "name": "DiscordBot",
+  "version": "0.0.6",
+  "description": "Un bot pour la gestion des commandes sur DiscordApp",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Azastrael <beuknaheul@hotmail.fr>",
+  "author": "Renouveaux",
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.1",
+    "discord.io": "^1.1.2",
     "fs-extra": "^0.23.1",
     "multiline": "^1.0.2",
-    "njstrace": "0.0.2",
-    "node-discord": "^0.2.0",
     "pretty-error": "^1.2.0"
   }
 }
