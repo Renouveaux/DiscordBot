@@ -1,4 +1,11 @@
-## 0.0.7
+## v.***0.0.8***
+
+Mise à jour du fichier du readme.
+
+### **Ajout** :
+	- Ajout de la génération automatique d'un fichier de config via la commande ***node install.js***.	
+
+## v.***0.0.7***
 
 ### **Ajout** :
         - help : Retourne toutes les commandes disponible
@@ -15,6 +22,6 @@ Le retour ce fait sur pastie.
  - Le fait que le message soit supprimé fait planter de manière aléatoire le bot.
         Il ne trouve apparement pas l'id du message à supprimer.
 
-## 0.0.6
+## v.***0.0.6***
 
 Début du projet
