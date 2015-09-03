@@ -13,6 +13,7 @@
     "discord.io": "^1.1.2",
     "fs-extra": "^0.23.1",
     "multiline": "^1.0.2",
+    "multiline.js": "^1.0.3",
     "pretty-error": "^1.2.0"
   }
 }
