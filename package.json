@@ -14,8 +14,13 @@
     "fs-extra": "^0.23.1",
     "multiline": "^1.0.2",
     "multiline.js": "^1.0.3",
+    "node-pastie": "0.0.3",
     "pouchdb": "^4.0.1",
     "pretty-error": "^1.2.0",
     "prompt": "^0.2.14"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0",
+    "should": "^7.1.0"
   }
 }
