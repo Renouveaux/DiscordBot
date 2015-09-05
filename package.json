@@ -1,6 +1,6 @@
 {
   "name": "DiscordBot",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Un bot pour la gestion des commandes sur DiscordApp",
   "main": "main.js",
   "scripts": {
