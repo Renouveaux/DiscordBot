@@ -31,14 +31,14 @@ var properties = [
 },{
 	description: 'Reconnexion automatique du bot (true|false) : ',
 	name: 'autoReconnect',
-	default: 'false',
+	default: false,
 	conform: function(autoReconnect){
 		return (autoReconnect === 'true' || autoReconnect === 'false');
 	}
 },{
 	description: 'Mode debug : ',
 	name: 'debug',
-	default: 'false',
+	default: false,
 	conform: function(debug){
 		return (debug === 'true' || debug === 'false');
 	}
