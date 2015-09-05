@@ -1,7 +1,7 @@
 require("should");
 
 describe('CodeFilter', function() {
-    CodeFilter = require('../lib/filters/code')
+    CodeFilter = require('../lib/filters/code/code')
     describe('#isCode()', function () {
         it('should let not code pass', function () {
             CodeFilter.isCode('Salut les gens' ).should.not.be.ok()
