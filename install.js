@@ -25,22 +25,27 @@ var properties = [
 	name: 'password',
 	hidden : true
 },{
+	description: 'Nom du bot : ',
+	name: 'botName'
+},{
 	description: 'Prefix de commande : ',
 	name: 'commandPrefix',
 	default: '!'
 },{
 	description: 'Reconnexion automatique du bot (true|false) : ',
 	name: 'autoReconnect',
+	type: 'boolean',
 	default: false,
 	conform: function(autoReconnect){
-		return (autoReconnect === 'true' || autoReconnect === 'false');
+		return (autoReconnect === true || autoReconnect === false);
 	}
 },{
 	description: 'Mode debug : ',
 	name: 'debug',
+	type: 'boolean',
 	default: false,
 	conform: function(debug){
-		return (debug === 'true' || debug === 'false');
+		return (debug === true || debug === false);
 	}
 }
 ];
@@ -70,7 +75,7 @@ prompt.get(properties, function (err, result) {
 
 	console.log('Enregistrement de vos informations dans le fichier config.json'.red);
 
-	fs.writeFile('config1.json', JSON.stringify(data, null, 4), function(err) {
+	fs.writeFile('config.json', JSON.stringify(data, null, 4), function(err) {
 		if(err) {
 			console.log(err);
 		} else {
