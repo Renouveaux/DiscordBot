@@ -1,9 +1,18 @@
+## V.***0.0.9***
+
+### **Ajout** :
+	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
+	Mise en place des tests unitaires, ils s'étofferons avec le temps afin que toutes les fonctions y soit présentes.
+
+### **Résolution de bug** :
+	Le bug pour la réponse en privé lors de la première commande d'un utilisateur à été corrigé directement dans la librairie Discord.io
+
 ## v.***0.0.8***
 
 Mise à jour du fichier du readme.
 
 ### **Ajout** :
-	- Ajout de la génération automatique d'un fichier de config via la commande ***node install.js***.	
+	- Ajout de la génération automatique d'un fichier de config via la commande ***node install.js***
 
 ## v.***0.0.7***
 
