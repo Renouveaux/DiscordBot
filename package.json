@@ -4,7 +4,7 @@
   "description": "Un bot pour la gestion des commandes sur DiscordApp",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Renouveaux",
   "license": "MIT",
@@ -20,7 +20,8 @@
     "prompt": "^0.2.14"
   },
   "devDependencies": {
-    "mocha": "^2.3.0",
-    "should": "^7.1.0"
+    "chai": "^3.2.0",
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.3.0"
   }
 }
