@@ -1,5 +1,5 @@
 expect = require("chai").expect
-CodeFilter = require('../lib/filters/code/code')
+CodeFilter = require('../lib/filters/code')
 
 describe 'filters/code', ->
 
