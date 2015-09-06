@@ -1,33 +1,36 @@
-### DiscordBot
+## V.***0.0.9***
 
-Un bot pour DiscordApp, permet de créer des commandes simple via la création de modules.
+### **Ajout** :
+	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
+	Mise en place des tests unitaires, ils s'étofferons avec le temps afin que toutes les fonctions y soit présentes.
 
-## Ce dont vous avez besoin
+### **Résolution de bug** :
+	Le bug pour la réponse en privé lors de la première commande d'un utilisateur à été corrigé directement dans la librairie Discord.io
 
-- Un email et un mot de passe utilisé sur Discord. Pas de connexion anonyme
+## v.***0.0.8***
 
-## Installation
+Mise à jour du fichier du readme.
 
-````javascript
-npm install
-````
+### **Ajout** :
+	- Ajout de la génération automatique d'un fichier de config via la commande ***node install.js***
 
-## Configuration
+## v.***0.0.7***
 
-Lancez simplement la commande suivante : et suivez le guide
+### **Ajout** :
+        - help : Retourne toutes les commandes disponible
+        - share : Retourne le lien d'un site de partage de code
+        - ping : Test le retour du Bot
+        - config : Pour admin seulement, permet de lire et d'écrire dans la config du bot
 
-```javascript
-node install.js
-```
+### **Modification** :
+- share. Utilisation de request pour la detection du bon fonctionnement du site
+et callback retournant l'adresse d'un share unique. En cas de 404 ou autre venant du site par défaut.
+Le retour ce fait sur pastie.
 
-## Modules disponible
+### **Bugs connu**
+ - Le fait que le message soit supprimé fait planter de manière aléatoire le bot.
+        Il ne trouve apparement pas l'id du message à supprimer.
 
-	- ping : Retourne en privé un message à l'utilisateur indiquant si le bot est toujours présent.
-	- help : Retourne la liste des commandes disponible.
-	- share : la commande share affichera par callback un lien direct vers une nouvelle instance de codeshare.
-		Si le site ne répond pas, un failBack vers pastie sera utilisé.
-	- config : commande pour modifier la configuration du bot, met à jour le fichier config.json. Necessite que le tableau admin soit renseigné dans le fichier 		config.json avec l'id des administrateurs.
+## v.***0.0.6***
 
-## Base du bot
-
-**Le bot peu fonctionner grâce au travail de Izy521 qui met régulièrement à jour sa librairie.** [Depot Izy521](https://github.com/izy521/discord.io)
+Début du projet
