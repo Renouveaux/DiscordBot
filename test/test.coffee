@@ -11,6 +11,9 @@ describe 'filters/code', ->
         it 'should let code pass on one line', ->
             expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !')).to.not.be.ok
 
+        it 'should not catch pings', ->
+            expect(CodeFilter.isCode('Woops trop de code <@89677831675604992> ! http://pastie.org/private/co2hxfz4o905tz6nyygqmg')).to.not.be.ok
+
         it 'should detect code based on }', ->
             expect(
                 CodeFilter.isCode("""
@@ -41,8 +44,32 @@ describe 'filters/code', ->
         it 'should detect HTML', ->
             expect(
               CodeFilter.isCode("""
-<div class="site-container">
-      <header class="topbar" id="topbar">
-        <a class="topbar-logo" href="/"><img alt="Logo Grafikart.fr" src="/assets/logo_white-6304a22034146ecc84fbf8b03347add71243ed8ea13ad1e9f1d2d0807eb5d909.png" /></a>
-        <nav class="topbar-menu">""")
+	<div class="content-wrap">
+
+
+		<a href="javascript:;" class="mobile-menu-button visible-mobile" id="open-button">
+			<span></span>
+		</a>
+
+		<div class="top visible-mobile">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <!-- Slides -->
+			        <div class="swiper-slide ph" data-source="ph">
+				        <h1>
+							Product Hunt
+				        </h1>
+				    </div>
+			        <div class="swiper-slide dn" data-source="dn">
+				        <h1>
+					        Designer News
+				        </h1>
+				    </div>
+			        <div class="swiper-slide hn" data-source="hn">
+				        <h1>
+					        Hacker News
+				        </h1>
+			        </div>
+			    </div>
+			</div>""")
             ).to.be.ok
