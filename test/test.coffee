@@ -9,7 +9,7 @@ describe 'filters/code', ->
             expect(CodeFilter.isCode('Salut les gens' )).to.not.be.ok
 
         it 'should let code pass on one line', ->
-            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là')).to.not.be.ok
+            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !')).to.not.be.ok
 
         it 'should detect code based on }', ->
             expect(
@@ -24,4 +24,25 @@ describe 'filters/code', ->
                         });
                     });
                 """)
+            ).to.be.ok
+
+        it 'should detect JSON', ->
+            expect(
+                CodeFilter.isCode("""contentDetails": {
+    "relatedPlaylists": {
+     "likes": "LL16BeXfcf_aMbSBOoticKsQ",
+     "favorites": "FL16BeXfcf_aMbSBOoticKsQ",
+     "uploads": "UU16BeXfcf_aMbSBOoticKsQ"
+    },""")
+            ).to.be.ok
+
+
+
+        it 'should detect HTML', ->
+            expect(
+              CodeFilter.isCode("""
+<div class="site-container">
+      <header class="topbar" id="topbar">
+        <a class="topbar-logo" href="/"><img alt="Logo Grafikart.fr" src="/assets/logo_white-6304a22034146ecc84fbf8b03347add71243ed8ea13ad1e9f1d2d0807eb5d909.png" /></a>
+        <nav class="topbar-menu">""")
             ).to.be.ok
