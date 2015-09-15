@@ -1,24 +1,18 @@
 expect = require("chai").expect
 CodeFilter = require('../lib/filters/code')
-DiscordBot = require('discord.io')
-Helpers = require('../lib/helpers')
-
-Config = Helpers.getConfig(true)
-
-Bot = new DiscordBot(Config.getConstructorConfig())
 
 describe 'filters/code', ->
 
     describe '#isCode()', ->
 
         it 'should let standart text pass', ->
-            expect(CodeFilter.isCode('Salut les gens', Bot )).to.not.be.ok
+            expect(CodeFilter.isCode('Salut les gens' )).to.not.be.ok
 
         it 'should let code pass on one line', ->
-            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !', Bot)).to.not.be.ok
+            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !')).to.not.be.ok
 
         it 'should not catch pings', ->
-            expect(CodeFilter.isCode('Woops trop de code <@89677831675604992> ! http://pastie.org/private/co2hxfz4o905tz6nyygqmg', Bot)).to.not.be.ok
+            expect(CodeFilter.isCode('Woops trop de code <@89677831675604992> ! http://pastie.org/private/co2hxfz4o905tz6nyygqmg')).to.not.be.ok
 
         it 'should detect code based on }', ->
             expect(
@@ -32,7 +26,7 @@ describe 'filters/code', ->
                             });
                         });
                     });
-                """, Bot)
+                """)
             ).to.be.ok
 
         it 'should detect JSON', ->
@@ -42,7 +36,7 @@ describe 'filters/code', ->
      "likes": "LL16BeXfcf_aMbSBOoticKsQ",
      "favorites": "FL16BeXfcf_aMbSBOoticKsQ",
      "uploads": "UU16BeXfcf_aMbSBOoticKsQ"
-    },""", Bot)
+    },""")
             ).to.be.ok
 
 
@@ -77,5 +71,5 @@ describe 'filters/code', ->
                         </h1>
                     </div>
                 </div>
-            </div>""", Bot)
+            </div>""")
             ).to.be.ok
