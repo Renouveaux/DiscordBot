@@ -6,13 +6,17 @@ describe 'filters/code', ->
     describe '#isCode()', ->
 
         it 'should let standart text pass', ->
-            expect(CodeFilter.isCode('Salut les gens' )).to.not.be.ok
+            expect(CodeFilter.isCode('Salut les gens' )).to.be.falsy
 
         it 'should let code pass on one line', ->
-            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !')).to.not.be.ok
+            expect(CodeFilter.isCode('vérifie les {} je pense que ça vient de là et j\'ai une <div> qui bloque !')).to.be.falsy
 
         it 'should not catch pings', ->
-            expect(CodeFilter.isCode('Woops trop de code <@89677831675604992> ! http://pastie.org/private/co2hxfz4o905tz6nyygqmg')).to.not.be.ok
+            expect(CodeFilter.isCode('Woops trop de code <@89677831675604992> ! http://pastie.org/private/co2hxfz4o905tz6nyygqmg')).to.be.falsy
+
+        it 'should not catch multiple replies', ->
+            expect(CodeFilter.isCode('Woo <@aaaa> <@bbbb> <@ccc> <@ddd> ')).to.be.falsy
+            expect(CodeFilter.isCode("Woo <@aaaa> <@bbbb>\n<@ccc>\n<@ddd>")).to.be.falsy
 
         it 'should detect code based on }', ->
             expect(

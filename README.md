@@ -1,5 +1,7 @@
 ## V.***0.0.9***
 
+[![Build Status](https://travis-ci.org/Renouveaux/DiscordBot.svg?branch=master)](https://travis-ci.org/Renouveaux/DiscordBot)
+
 ### **Ajout** :
 	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
 	Mise en place des tests unitaires, ils s'étofferons avec le temps afin que toutes les fonctions y soit présentes.
