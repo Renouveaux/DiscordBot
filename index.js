@@ -9,12 +9,10 @@ var Helpers;
 var Config;
 var PouchDB;
 
-
 fs = require('fs-extra');
 DiscordBot = require('discord.io');
 PrettyError = require('pretty-error');
 events = require('events');
-PouchDB = require('pouchdb');
 
 Events = require('./lib/events');
 Helpers = require('./lib/helpers');
@@ -42,7 +40,7 @@ Bot = new DiscordBot(Config.getConstructorConfig());
 // Initialisation de la base de donnée
 //
 
-var db = new PouchDB('ratonBot');
+//var db = new PouchDB('ratonBot');
 
 
 //
@@ -70,3 +68,14 @@ InternalEvents.emit('connection');
 //
 
 Bot.connect();
+
+/*
+ * PM2 Trigger
+*/
+
+var pmx = require('pmx');
+
+pmx.action('restart', function(reply) {
+  reply({success : true});
+  process.exit(0);
+});
