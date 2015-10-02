@@ -18,7 +18,7 @@ console.log("Merci de renseigner les informations demandées".cyan);
 var properties = [
 {
 	description: 'Email Discord : ',
-	name: 'username',
+	name: 'email',
 	format: 'email'
 },{
 	description: 'Mot de passe associé : ',
@@ -57,7 +57,7 @@ var defaultData = {
 	},
 	"allowedChannelIds": {},
 	"protectedKeys": [
-	"username",
+	"email",
 	"password"
 	]
 }
