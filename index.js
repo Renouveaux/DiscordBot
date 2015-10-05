@@ -8,11 +8,13 @@ var Events;
 var Helpers;
 var Config;
 var PouchDB;
+var Promis;
 
 fs = require('fs-extra');
 DiscordBot = require('discord.io');
 PrettyError = require('pretty-error');
 events = require('events');
+Promise = require('promise');
 
 Events = require('./lib/events');
 Helpers = require('./lib/helpers');
