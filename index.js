@@ -15,6 +15,7 @@ DiscordBot = require('discord.io');
 PrettyError = require('pretty-error');
 events = require('events');
 Promise = require('promise');
+PouchDB = require('pouchdb');
 
 Events = require('./lib/events');
 Helpers = require('./lib/helpers');
