@@ -7,7 +7,6 @@ var Bot;
 var Events;
 var Helpers;
 var Config;
-var PouchDB;
 var Promis;
 
 fs = require('fs-extra');
@@ -15,7 +14,6 @@ DiscordBot = require('discord.io');
 PrettyError = require('pretty-error');
 events = require('events');
 Promise = require('promise');
-PouchDB = require('pouchdb');
 
 Events = require('./lib/events');
 Helpers = require('./lib/helpers');
@@ -30,7 +28,7 @@ GLOBAL.InternalEvents = new events.EventEmitter();
 // On charge la configuration
 //
 
-Config = Helpers.getConfig(true);
+Config = Helpers.getConfig(false);
 
 //
 // Initialisation du bot avec la config
@@ -43,7 +41,6 @@ Bot = new DiscordBot(Config.getConstructorConfig());
 // Initialisation de la base de donnée
 //
 
-//var db = new PouchDB('ratonBot');
 
 
 //

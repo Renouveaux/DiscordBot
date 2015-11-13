@@ -1,6 +1,18 @@
+
+## V.***0.1.0***
+[![Build Status](https://travis-ci.org/Renouveaux/DiscordBot.svg?branch=master)](https://travis-ci.org/Renouveaux/DiscordBot)
+
+### **Ajout** : 
+	Ajout de la commande sms, affichant un message d'attention au format d'écriture.
+	Ajout d'un message d'accueil pour les nouveau arrivant (Message à la première connexion seulement).
+
+### **Résolution de bug** :
+	Correction de la commande screen suite à la mise à jour de la librairie Discord.io
+	Correction de la commande share suite à la mise à jour de la librairie Discord.io
+		-> Ces deux mise à jour concerne le changement de pseudo du Bot.
+
 ## V.***0.0.9***
 
-[![Build Status](https://travis-ci.org/Renouveaux/DiscordBot.svg?branch=master)](https://travis-ci.org/Renouveaux/DiscordBot)
 
 ### **Ajout** :
 	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
