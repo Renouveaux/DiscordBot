@@ -17,6 +17,7 @@
     "multiline.js": "^1.0.3",
     "node-pastie": "0.0.3",
     "node-schedule": "^0.2.9",
+    "pastebin": "0.0.1",
     "pmx": "^0.4.6",
     "pouchdb": "^4.0.1",
     "pretty-error": "^1.2.0",
