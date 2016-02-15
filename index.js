@@ -8,12 +8,16 @@ var Events;
 var Helpers;
 var Config;
 var Promis;
+var PouchDB;
+var winston;
 
 fs = require('fs-extra');
 DiscordBot = require('discord.io');
 PrettyError = require('pretty-error');
 events = require('events');
 Promise = require('promise');
+PouchDB = require('pouchdb');
+winston = require('winston');
 
 Events = require('./lib/events');
 Helpers = require('./lib/helpers');
@@ -41,13 +45,28 @@ Bot = new DiscordBot(Config.getConstructorConfig());
 // Initialisation de la base de donnée
 //
 
+var db = new PouchDB('ratonBot', { db: require('leveldown') });
 
 
+//
+// Gestionnaire d'erreur 'Winston'
+//
+
+var logger = new (winston.Logger)({
+    transports: [
+      new (winston.transports.Console)(),
+      new (winston.transports.File)({ filename: 'ratonBot.log' })
+    ]
+});
+
+winston.handleExceptions(new winston.transports.File({ filename: 'exceptions.log' }))
+
+debugger;
 //
 // Initialise les events
 //
 
-Events.init(Bot, Config, Helpers);
+Events.init(Bot, Config, Helpers, db, logger);
 
 console.info('Le bot se connecte ...');
 
