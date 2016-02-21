@@ -1,4 +1,25 @@
+## V.***0.1.2***
+
+### **Ajout** : 
+	Ajout de la commande bit pour raccourcir les urls de manière automatique.
+	Ajout d'un filtre basé sur bit.ly 
+
+### **Résolution de bug** :
+	Correction de la commande clean pour prise en compte de la mise à jour de la librairie en 1.7.1 de Discord.io
+
+## V.***0.1.0***
+
+### **Ajout** : 
+	Ajout de la commande sms, affichant un message d'attention au format d'écriture.
+	Ajout d'un message d'accueil pour les nouveau arrivant (Message à la première connexion seulement).
+
+### **Résolution de bug** :
+	Correction de la commande screen suite à la mise à jour de la librairie Discord.io
+	Correction de la commande share suite à la mise à jour de la librairie Discord.io
+		-> Ces deux mise à jour concerne le changement de pseudo du Bot.
+
 ## V.***0.0.9***
+
 
 ### **Ajout** :
 	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
