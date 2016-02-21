@@ -7,7 +7,7 @@ var Bot;
 var Events;
 var Helpers;
 var Config;
-var Promis;
+var Promise;
 var PouchDB;
 var winston;
 
