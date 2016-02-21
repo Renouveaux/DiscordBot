@@ -1,6 +1,6 @@
 {
   "name": "DiscordBot",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Un bot pour la gestion des commandes sur DiscordApp",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "better-pastebin": "^0.1.5",
+    "bitly": "^4.1.1",
     "chalk": "^1.1.1",
     "cron": "^1.0.9",
-    "discord.io": "^1.6.5",
+    "discord.io": "^1.7.1",
     "fs-extra": "^0.23.1",
     "multiline": "^1.0.2",
     "multiline.js": "^1.0.3",
