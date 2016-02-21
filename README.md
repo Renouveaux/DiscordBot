@@ -1,50 +1,32 @@
-
-## V.***0.1.0***
 [![Build Status](https://travis-ci.org/Renouveaux/DiscordBot.svg?branch=master)](https://travis-ci.org/Renouveaux/DiscordBot)
 
-### **Ajout** : 
-	Ajout de la commande sms, affichant un message d'attention au format d'écriture.
-	Ajout d'un message d'accueil pour les nouveau arrivant (Message à la première connexion seulement).
+[changelog](https://github.com/Renouveaux/DiscordBot/blob/master/CHANGELOG.md)
 
-### **Résolution de bug** :
-	Correction de la commande screen suite à la mise à jour de la librairie Discord.io
-	Correction de la commande share suite à la mise à jour de la librairie Discord.io
-		-> Ces deux mise à jour concerne le changement de pseudo du Bot.
+# DiscordBot
+Un bot pour le chat sur Discord basé sur <a href="https://github.com/izy521/discord.io">discord.io</a>
 
-## V.***0.0.9***
+# Caractéristiques:
+- !bit url => Retourne une url bitifié via le site bit.ly
+- !clean query => Nettoie le chat du nombre de message de la query peu-être un chiffre ou all
+- !config key => Retourne et ou modifie la configuration du bot
+- !help => Retourne la liste des commandes du bot
+- !ping => Envoie un ping au bot répondant à la personne en **MP**
+- !poll key => Système de sondage, non implémenté
+- !question @user => Envoie à l'@user, un message lui précisant comment poser sa question
+- !screen => Retourne l'url permettant le partage d'image
+- !share @user => Retourne une url propre de codeshare pour le partage de code
+- !sms @user => Alerte un utilisateur que le langage sms est prohibé
+- #filter => Supprime et remplace automatiquement le code d'un utilisateur par un lien contenant ce dit code
+- #bit => Remplace une URL d'un utilisateur par une URL simplifié par bit.ly
 
+Et bien plus
 
-### **Ajout** :
-	Une nouveau filtre pour la détection de bloc de code. Cela supprime le message, pousse le code dans un nouveau pastie et retourne l'url.
-	Mise en place des tests unitaires, ils s'étofferons avec le temps afin que toutes les fonctions y soit présentes.
+# Installation
 
-### **Résolution de bug** :
-	Le bug pour la réponse en privé lors de la première commande d'un utilisateur à été corrigé directement dans la librairie Discord.io
+Ce bot est écrit pour fonctionner sous nodejs. Please see https://nodejs.org/en/download/
 
-## v.***0.0.8***
+Une fois cloné, lancer la commande npm install afin d'installer les packages utiles puis un node install.js pour paramètrer le fichier de config.
 
-Mise à jour du fichier du readme.
+# Autre
 
-### **Ajout** :
-	- Ajout de la génération automatique d'un fichier de config via la commande ***node install.js***
-
-## v.***0.0.7***
-
-### **Ajout** :
-        - help : Retourne toutes les commandes disponible
-        - share : Retourne le lien d'un site de partage de code
-        - ping : Test le retour du Bot
-        - config : Pour admin seulement, permet de lire et d'écrire dans la config du bot
-
-### **Modification** :
-- share. Utilisation de request pour la detection du bon fonctionnement du site
-et callback retournant l'adresse d'un share unique. En cas de 404 ou autre venant du site par défaut.
-Le retour ce fait sur pastie.
-
-### **Bugs connu**
- - Le fait que le message soit supprimé fait planter de manière aléatoire le bot.
-        Il ne trouve apparement pas l'id du message à supprimer.
-
-## v.***0.0.6***
-
-Début du projet
+Si vous avez des remarques, commentaires idée de fonctionnalité ou autre, n'hesitez pas.
