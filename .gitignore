@@ -2,3 +2,4 @@ node_modules
 config.json
 ratonBot
 .idea
+exceptions.log
