@@ -16,6 +16,7 @@
     "cron": "^1.0.9",
     "discord.io": "^1.7.1",
     "fs-extra": "^0.23.1",
+    "leveldown": "^1.4.4",
     "multiline": "^1.0.2",
     "multiline.js": "^1.0.3",
     "node-pastie": "0.0.3",
@@ -24,6 +25,7 @@
     "pmx": "^0.4.6",
     "pouchdb": "^4.0.1",
     "pretty-error": "^1.2.0",
+    "promise": "^7.1.1",
     "prompt": "^0.2.14",
     "winston": "^2.1.1"
   },
