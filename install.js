@@ -53,7 +53,21 @@ var properties = [
 var defaultData = {
 	"admin": [],
 	"global": {
-		"share": "http://codeshare.io"
+		"share": "http://codeshare.io",
+		"screen": "https://lut.im"
+	},
+	"API": {
+		"pastebin": {
+		  "key": "",
+		  "username": "",
+		  "password": ""
+		},
+		"pastee": {
+		  "key": ""
+		},
+		"bitly": {
+		  "key": ""
+		}
 	},
 	"allowedChannelIds": {},
 	"protectedKeys": [
